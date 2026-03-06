@@ -4,7 +4,46 @@
 <meta charset=utf-8>
 <title>daily oracle</title>
 </head>
+<style>
+	body {
+		background-color: #ffb1d7;
+		font-family: Arial, sans-serif;
+		text-align: center;
+		margin-top: 50px;
+	}
+	#oracle-btn {
+		padding: 12px 24px;
+		font-size: 18px;
+		background: #fff;
+		border: none;
+		border-radius: 8px;
+		cursor: pointer;
+		color: #ffb1d7;
+		font-weight: bold;
+		box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+		transition: background 0.2s;
+	}
+	#oracle-btn:hover {
+		background: #ffe3f3;
+	}
+	#oracle-result {
+		margin-top: 32px;
+		font-size: 32px;
+		color: #a8005a;
+		font-weight: bold;
+	}
+</style>
+</head>
 <body>
 <p>Lauras daily oracle</p>
+</body>
+<button id="oracle-btn">Click for daily oracle</button>
+<div id="oracle-result"></div>
+<script>
+document.getElementById('oracle-btn').addEventListener('click', function() {
+	const randomNumber = Math.floor(Math.random() * 100);
+	document.getElementById('oracle-result').textContent = randomNumber;
+});
+</script>
 </body>
 </html>
